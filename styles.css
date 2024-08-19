@@ -1,0 +1,306 @@
+
+* { /* CSS Reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+:root {
+    --primary-color: rgb(255, 255, 255); /* Main brand color */
+    --secondary-color: ; /* Variety */
+    --tertiary-color: color-mix(oklab, /* Depth & variety */
+                      var(--primary-color), 
+                      var(--secondary-color));
+    --neutral-color: ; /* Doesn't stand out */
+    --accent-color: ; /* CTA */
+    --dark-color: ; /* Readability */
+    --background-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Rubik';
+}
+
+@font-face {
+    font-family: Canterbury;
+    src: url(assets/fonts/Canterbury.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(assets/fonts/Rubik.ttf);
+}
+
+@keyframes fade { /* forwards: fade-in || backwards: fade-out */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes gradient-loop {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.container {
+    display: inline-block;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.three-column-grid {
+    display: grid;
+    grid-template-rows: fit-content(1px) fit-content(1px);
+    grid-template-columns: 1fr fit-content(1px) 1fr;
+    align-items: center;
+}
+
+.four-column-grid {
+    display: grid;
+    grid-template-rows: fit-content(1px) fit-content(1px);
+    grid-template-columns: 1fr fit-content(1px) fit-content(1px) 1fr;
+    align-items: center;
+}
+
+.five-column-grid {
+    display: grid;
+    grid-template-rows: fit-content(1px) fit-content(1px);
+    grid-template-columns: 1fr fit-content(1px) fit-content(1px) fit-content(1px) 1fr;
+    align-items: center;
+}
+
+.second-grid-column {
+    grid-column: 2 / 3;
+}
+
+.third-grid-column {
+    grid-column: 3 / 4;
+}
+
+.fourth-grid-column {
+    grid-column: 4 / 5;
+}
+
+.first-grid-row {
+    grid-row: 1 / 2;
+}
+
+.second-grid-row {
+    grid-row: 2 / 3;
+}
+
+.transparent-base {
+    background-clip: text;
+    color: transparent;
+}
+
+.text-emboss {
+    text-shadow: 0 0.015em 0 rgba(0, 0, 0, 0.5), 
+                 0 -0.015em 0 rgba(255, 255, 255, 0.5);
+}
+
+.text-deboss {
+    text-shadow: 0 -0.025em 3px rgba(0, 0, 0, 0.5), 
+                 0 0.025em 3px rgba(255, 255, 255, 0.5);
+}
+
+.responsive-text-wrap { /* Uses js to perfectly wrap text in one line */
+    text-align: center;
+}
+
+h1 {
+    white-space: nowrap; /* Locks fit-content to size of h1 */
+    font-size: calc(100vw / 9);
+    font-weight: 400;
+    display: inline-block;
+    align-self: center;
+    word-break: break-all;
+}
+
+h2 {
+    font-size: calc(100vw / 15);
+    font-weight: 400;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+    word-break: break-all;
+    align-self: center;
+    text-align: center;
+}
+
+h3 {
+    white-space: nowrap;
+}
+
+h4 {
+    font-size: calc(100vw / 40);
+    font-weight: 600;
+    margin-left: 0.5em;
+    white-space: nowrap;
+}
+
+h5 {
+    font-size: calc(100vw / 40);
+    font-weight: 400;
+    white-space: nowrap;
+    display: inline-block;
+    align-self: end;
+    text-align: right;
+    margin-left: 1em;
+}
+
+h6 {
+    font-size: 3rem;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 0.25em;
+    margin-top: 4.4em;
+}
+
+.skills-column {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.25), black, rgba(0, 0, 0, 0.25), transparent);
+    background-size: 100% 200%;
+    background-position-y: 50%;
+}
+
+.skill {
+    display: inline-block;
+}
+
+.middle-skill {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.black-underlay {
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    right: 100%;
+    height: 5em;
+}
+
+.about-me-paragraph {
+    width: calc(100vw / 3);
+    line-height: 1.6;
+}
+
+.entry-image {
+    width: calc(100vw / 4);
+    height: calc(100vw / 3.5);
+    margin-top: 6rem;
+    margin-left: calc(100vw / 40);
+    background-color: aliceblue;
+}
+
+.text-type-one {
+    font-size: calc(100vw / 25);
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 0.05em;
+    margin-top: 0.75em;
+}
+
+.cta-button {
+    font-size: 2rem;
+    padding: 1em;
+}
+
+.sa-button {
+    font-size: 2rem;
+    padding: 1em;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.sidebar {
+    background-color: transparent;
+    padding: 20px;
+}
+
+.align-div-center {
+    text-align: center;
+}
+
+.gradient-button {
+    background-image: linear-gradient(to right, #5F14FF, #7a3cff, #5F14FF, #7a3cff);
+    background-size: 300%;
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, #5F14FF, #FF5400, #5F14FF, #FF5400);
+    background-clip: text;
+    background-size: 300%;
+    color: transparent;
+}
+
+.cta-button {
+    border: thick solid #A080E4;
+    border-radius: 100px;
+    padding: 1em 2em;
+    margin: 0;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: inline-block;
+
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+.cta-button:hover {
+    border: thick solid #5F14FF;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24), 0 10px 10px 0 rgba(0,0,0,0.19);
+    animation: gradient-loop 1s forwards linear infinite;
+}
+
+.container p {
+    color: blue; 
+    font-size: 100px;
+}
+
+.container1 > p {
+    color: blue; 
+    font-size: 100px;
+}
+
+[class="primary-button"], [data-role="primary-button"] {
+    background-color: blue;
+    color: white;
+}
+*/
